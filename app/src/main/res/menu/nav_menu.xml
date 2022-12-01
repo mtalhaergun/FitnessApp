@@ -8,20 +8,20 @@
         />
     <item
         android:id="@+id/guidepage"
-        android:icon="@drawable/dumbbell"
+        android:icon="@drawable/guide"
         android:title="Guide"
-        android:iconTint="#BABABA"/>
+    />
     <item
         android:id="@+id/socialpage"
-        android:icon="@drawable/dumbbell"
+        android:icon="@drawable/social"
         android:title="Social" />
     <item
         android:id="@+id/utilitypage"
-        android:icon="@drawable/dumbbell"
+        android:icon="@drawable/utility"
         android:title="Utilities" />
     <item
         android:id="@+id/profilepage"
-        android:icon="@drawable/dumbbell"
+        android:icon="@drawable/profile"
         android:title="Profile" />
 
 </menu>

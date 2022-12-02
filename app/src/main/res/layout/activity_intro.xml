@@ -29,7 +29,9 @@
         android:layout_marginLeft="105dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/btnclr"
-        android:text="GET STARTED" />
+        android:text="GET STARTED"
+        android:textColor="@color/white"
+        android:textSize="18dp"/>
 
 
 </RelativeLayout>

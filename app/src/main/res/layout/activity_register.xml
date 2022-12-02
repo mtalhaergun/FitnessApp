@@ -25,7 +25,8 @@
             android:textColorHint="#fffbf8"
             android:paddingLeft="20dp"
             android:layout_marginTop="200dp"
-            android:background="@drawable/btn"/>
+            android:background="@drawable/btn"
+            android:textColor="@color/white"/>
         <EditText
             android:id="@+id/email"
             android:layout_width="300dp"
@@ -35,7 +36,8 @@
             android:textColorHint="#fffbf8"
             android:paddingLeft="20dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/btn"/>
+            android:background="@drawable/btn"
+            android:textColor="@color/white"/>
 
         <EditText
             android:id="@+id/password"
@@ -46,7 +48,8 @@
             android:textColorHint="#fffbf8"
             android:paddingLeft="20dp"
             android:layout_marginTop="15dp"
-            android:background="@drawable/btn"/>
+            android:background="@drawable/btn"
+            android:textColor="@color/white"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signupBtn"
@@ -55,8 +58,8 @@
             android:text="SIGN UP"
             android:layout_marginTop="15dp"
             android:background="@drawable/btnclr"
-            android:textColor="#fffbf8"
-            android:textSize="15dp"/>
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"/>
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"

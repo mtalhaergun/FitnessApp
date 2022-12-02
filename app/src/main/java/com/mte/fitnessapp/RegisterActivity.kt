@@ -49,7 +49,7 @@ class RegisterActivity : AppCompatActivity() {
 
                         val currentUser = auth.currentUser
                         val currentUserDb = databaseReference?.child((currentUser?.uid!!))
-                        currentUserDb?.child("adsoyad")?.setValue(uyeadsoyad)
+                        currentUserDb?.child("username")?.setValue(uyeadsoyad)
                         currentUserDb?.child("email")?.setValue(uyemail)
                         currentUserDb?.child("sifre")?.setValue(uyesifre)
                         Toast.makeText(this,"Kayıt Başarılı",Toast.LENGTH_SHORT).show()

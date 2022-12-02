@@ -16,5 +16,9 @@ class ForgotPasswordActivity : AppCompatActivity() {
         binding.resetBtn.setOnClickListener {
 
         }
+
+        binding.leftArrow.setOnClickListener {
+            finish()
+        }
     }
 }

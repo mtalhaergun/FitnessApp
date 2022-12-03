@@ -43,9 +43,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
+
                         android:gravity="center"
                         android:text="E-Posta:"
                         android:textSize="25dp" />
+
 
                 </LinearLayout>
 
@@ -63,7 +65,6 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="15dp"
                         android:ems="10"
-                        android:enabled="false"
                         android:gravity="center"
                         android:inputType="textPersonName" />
 
@@ -73,10 +74,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="15dp"
-
+                        android:inputType="textEmailAddress"
                         android:ems="10"
                         android:gravity="center"
-                        android:inputType="textPersonName" />
+                         />
+
 
                 </LinearLayout>
             </LinearLayout>
@@ -96,6 +98,13 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:text="Çıkış Yap" />
+            <Button
+                android:id="@+id/resetparola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Şifre Sıfırla" />
 
             <Button
                 android:id="@+id/deleteAccount"
@@ -104,6 +113,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:text="Hesabımı Sil" />
+
 
         </LinearLayout>
     </ScrollView>

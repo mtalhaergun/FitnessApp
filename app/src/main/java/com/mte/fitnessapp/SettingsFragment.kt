@@ -2,6 +2,7 @@ package com.mte.fitnessapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -23,6 +24,7 @@ class SettingsFragment : Fragment() {
         auth= FirebaseAuth.getInstance()
         database= FirebaseDatabase.getInstance()
         databaseReference=database?.reference!!.child("profile")
+
     }
 
     override fun onCreateView(
@@ -36,13 +38,13 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var currentuser = auth.currentUser
-
         var userReference = databaseReference?.child(currentuser?.uid!!)
-        userReference?.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                binding.editTextEposta.hint = snapshot.child("email").value.toString()
-                binding.editTextAd.hint = snapshot.child("username").value.toString()
 
+        userReference?.addValueEventListener(object: ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                binding.editTextEposta.setText(currentuser!!.email).toString()
+
+                binding.editTextAd.setText(snapshot.child("username").value.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -51,6 +53,7 @@ class SettingsFragment : Fragment() {
 
 
         })
+
         binding.cikisYap.setOnClickListener { auth.signOut()
             val intent= Intent(requireContext(),LoginActivity::class.java)
             startActivity(intent)
@@ -64,9 +67,45 @@ class SettingsFragment : Fragment() {
                     val intent= Intent(requireContext(),LoginActivity::class.java)
                     startActivity(intent)
                     activity?.finish()
+                    var currentUserDb=currentuser?.let { it1 -> databaseReference?.child(it1.uid) }
+                    currentUserDb?.removeValue()
                 }
             }
 
+        }
+        binding.resetparola.setOnClickListener {
+            var psifirlaemail=currentuser?.email
+
+            if (psifirlaemail != null) {
+                auth.sendPasswordResetEmail(psifirlaemail)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+
+                            Toast.makeText(requireContext(),"Şifre sıfırlama maili gönderildi", Toast.LENGTH_LONG).show()
+                        }
+                    }
+            }
+
+        }
+        binding.buttonGuncelle.setOnClickListener {
+          var guncelleEmail=binding.editTextEposta.text.toString().trim()
+            currentuser!!.updateEmail(guncelleEmail).addOnCompleteListener {
+                if (it.isSuccessful){
+                    Toast.makeText(requireContext(),"Email Güncellendi",Toast.LENGTH_SHORT).show()
+
+                }else{
+                    Toast.makeText(requireContext(),"Email güncelleme başarısız",Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            var currentUserDb=currentuser?.let { it1->databaseReference?.child(it1.uid) }
+            currentUserDb?.removeValue()
+            currentUserDb?.child("username")?.setValue(binding.editTextAd.text.toString())
+            currentUserDb?.child("email")?.setValue(binding.editTextEposta.text.toString())
+
+            auth.signOut()
+            val intent= Intent(requireContext(),LoginActivity::class.java)
+            startActivity(intent)
         }
 
 

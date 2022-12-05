@@ -1,12 +1,17 @@
 package com.mte.fitnessapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.mte.fitnessapp.databinding.FragmentProfileBinding
+import com.mte.fitnessapp.databinding.FragmentWorkoutBinding
 
 class WorkoutFragment : Fragment() {
+    private var _binding : FragmentWorkoutBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +22,17 @@ class WorkoutFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_workout, container, false)
+        _binding=FragmentWorkoutBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.exercisesImage.setOnClickListener {
+            val intent = Intent(this@WorkoutFragment.context,ExercisesActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

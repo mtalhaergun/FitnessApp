@@ -5,11 +5,114 @@
     android:layout_height="match_parent"
     tools:context=".WorkoutFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WORKOUT"
-        android:textSize="50dp"
-        android:layout_gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#252525">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exercises"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_margin="8dp"/>
+
+            <ImageView
+                android:id="@+id/exercisesImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/exercisesbg"
+                android:background="#FAFAFA"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Workouts"
+                android:textSize="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="23dp"/>
+
+
+            <ImageView
+                android:id="@+id/bicepsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:background="#FAFAFA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/bicepsbg" />
+
+            <ImageView
+                android:id="@+id/tricepsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#FAFAFA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/tricepsbg"/>
+            <ImageView
+                android:id="@+id/shouldersImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#FAFAFA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/shouldersbg"/>
+            <ImageView
+                android:id="@+id/absImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#FAFAFA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/absbg"/>
+            <ImageView
+                android:id="@+id/backImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#FAFAFA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/backbg"/>
+            <ImageView
+                android:id="@+id/legsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#FAFAFA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/legsbg"
+                android:layout_marginBottom="15dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

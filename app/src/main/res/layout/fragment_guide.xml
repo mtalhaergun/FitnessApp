@@ -3,13 +3,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".GuideFragment">
 
-    <TextView
-        android:id="@+id/textView5"
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GUIDE"
-        android:textSize="50dp"
-        android:layout_gravity="center" />
+        android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/guideContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#252525">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/caloriImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/caloriesimage"
+                    app:shapeAppearanceOverlay="@style/roundImageView" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/supplementsImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="213dp"
+                    android:layout_below="@id/caloriImage"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/supplementsimage"
+                    app:shapeAppearanceOverlay="@style/roundImageView" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/musclegroupsImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="213dp"
+                    android:layout_below="@id/caloriImage"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/musclegropusimage"
+                    app:shapeAppearanceOverlay="@style/roundImageView" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/guideImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/supplementsImage"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/guideimage"
+                    app:shapeAppearanceOverlay="@style/roundImageView" />
+
+            </RelativeLayout>
+
+    </ScrollView>
+
+
+
 </FrameLayout>

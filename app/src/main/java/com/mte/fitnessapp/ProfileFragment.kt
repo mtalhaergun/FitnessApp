@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
 import com.mte.fitnessapp.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {

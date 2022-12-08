@@ -42,7 +42,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="23dp"/>
 
-
             <ImageView
                 android:id="@+id/bicepsImage"
                 android:layout_width="wrap_content"
@@ -67,7 +66,7 @@
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/tricepsbg"/>
             <ImageView
-                android:id="@+id/shouldersImage"
+                android:id="@+id/chestImage"
                 android:layout_width="wrap_content"
                 android:layout_height="98dp"
                 android:paddingStart="2dp"
@@ -76,7 +75,18 @@
                 android:background="#FAFAFA"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/shouldersbg"/>
+                android:src="@drawable/chestbg"/>
+            <ImageView
+                android:id="@+id/backImage"
+                android:layout_width="wrap_content"
+                android:layout_height="98dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#FAFAFA"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/backbg"/>
             <ImageView
                 android:id="@+id/absImage"
                 android:layout_width="wrap_content"
@@ -89,7 +99,7 @@
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/absbg"/>
             <ImageView
-                android:id="@+id/backImage"
+                android:id="@+id/shouldersImage"
                 android:layout_width="wrap_content"
                 android:layout_height="98dp"
                 android:paddingStart="2dp"
@@ -98,7 +108,7 @@
                 android:background="#FAFAFA"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/backbg"/>
+                android:src="@drawable/shouldersbg"/>
             <ImageView
                 android:id="@+id/legsImage"
                 android:layout_width="wrap_content"

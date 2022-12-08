@@ -80,11 +80,8 @@
                     android:scaleType="centerInside"
                     android:src="@drawable/guideimage"
                     app:shapeAppearanceOverlay="@style/roundImageView" />
-
             </RelativeLayout>
 
     </ScrollView>
-
-
 
 </FrameLayout>

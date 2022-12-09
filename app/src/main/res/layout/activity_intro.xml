@@ -25,13 +25,17 @@
         android:id="@+id/getStartedBtn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="105dp"
         android:layout_marginLeft="105dp"
+        android:layout_marginEnd="106dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/btnclr"
         android:text="GET STARTED"
         android:textColor="@color/white"
-        android:textSize="18dp"/>
+        android:textSize="18dp" />
 
 
 </RelativeLayout>
